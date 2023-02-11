@@ -1,0 +1,34 @@
+{% extends 'basic.html' %}
+{% load static %}
+{% block title %} Library Management System {% endblock %}
+{% block css %}
+{% endblock %}
+{% block body %}
+<div class="p-4 ">
+    <div class="container py-3">
+      <h1 class="display-5 fw-bold text-success">Welcome to DataFlair Library Management System</h1><br><br>
+      <p class="col-md-8 fs-4 text-secondary">You can register as student. You will be able to issue any book thorugh the admin. After that you need to return the book within 14 days or else a fine of Rs 5 will be charged per day till the book is returned.</p>
+      <a href="/student_registration/" class="btn btn-success btn-lg">Register as Student</a>
+    </div>
+    <br>
+</div>
+<div class="p-4">
+  <div class="container py-3">
+     <h2 class="text-success"> Our Books</h2>
+     {% for book in books %}
+        <div class="card bg-light">
+          <div class="card-body">
+            <h4 class="card-title">{{book.name}}</h4>
+        
+        <span class="card-text">
+        {{ book.category }}  by {{ book.author}}<br>
+        isbn: {{ book.isbn }}
+        </span>
+        </div>
+      </div>
+    {% endfor %}
+
+  </div>
+</div>
+
+{% endblock %}

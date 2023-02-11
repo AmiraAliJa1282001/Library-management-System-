@@ -1,0 +1,64 @@
+{% extends "admin/base_site.html" %}
+
+{% block title %}Library Management System | Admin{% endblock %}
+
+{% block branding %}Library Management System{% endblock %}
+
+{% block breadcrumbs %}{% endblock %}
+
+{% block bodyclass %}bg-light{% endblock %}
+
+{% block extrastyle %}
+    
+    <style>
+      #header, .breadcrumbs { 
+        background-color: rgb(25, 135, 84);
+         color: #ffffff; 
+        font-size: 20px;
+        }
+
+      /* Bootstrap issues with admin */
+      * { box-sizing: unset; }
+      div.module caption { caption-side: top !important; }
+      .collapse { display: block !important; }
+
+      #container > .main {
+    background-color: white!important;
+    }
+    .module h2, .module caption, .inline-group h2 {
+    background: rgb(25, 135, 84);
+    color: var(--header-link-color);
+}
+div.breadcrumbs {
+    background: rgb(25 135 84 / 52%);
+    padding: 10px 40px;
+    border: none;
+    color: var(--breadcrumbs-fg);
+    text-align: left;
+}
+a:link, a:visited {
+    color: rgb(29 128 82);
+
+}
+a:link:hover, a:visited:hover
+  {
+    color: rgb(67, 164, 119);
+
+}
+.button:hover, 
+input[type=submit]:hover, input[type=button]:hover, .submit-row input:hover, a.button:hover,
+.button.default:hover, input[type=submit].default:hover, .submit-row input.default:hover{
+    background-color: rgb(67, 164, 119) ;
+}
+.button, input[type=submit], input[type=button], .submit-row input, a.button {
+    background: rgb(25, 135, 84);
+}
+.button.default, input[type=submit].default, .submit-row input.default {
+    background: rgb(17 106 65);
+}
+    </style>
+{% endblock %}
+
+
+
+
